@@ -33,11 +33,10 @@ if(NOT SCHEMA_RESULT EQUAL 0)
   message(FATAL_ERROR "Unable to compile GSettings schemas")
 endif()
 install(PROGRAMS main.py setup.py DESTINATION ${CMAKE_INSTALL_DATADIR}/ibus-googlepinyin)
-install(FILES engine.py factory.py libopencc.py googlepinyin.py settings.py pinyin.py decoder.py i18n.py
+install(FILES engine.py factory.py libopencc.py googlepinyin.py settings.py pinyin.py decoder.py i18n.py cloudpinyin.py
               ${CMAKE_CURRENT_BINARY_DIR}/config.py
         DESTINATION ${CMAKE_INSTALL_DATADIR}/ibus-googlepinyin)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/googlepinyin.xml DESTINATION ${CMAKE_INSTALL_DATADIR}/ibus/component)
 install(FILES data/${SCHEMA} DESTINATION ${CMAKE_INSTALL_DATADIR}/glib-2.0/schemas)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/ibus-setup-googlepinyin.desktop DESTINATION ${CMAKE_INSTALL_DATADIR}/applications)
 install(DIRECTORY icons/ DESTINATION ${CMAKE_INSTALL_DATADIR}/ibus-googlepinyin/icons)
-install(CODE "execute_process(COMMAND \"${GLIB_COMPILE_SCHEMAS}\" \"\$ENV{DESTDIR}${CMAKE_INSTALL_FULL_DATADIR}/glib-2.0/schemas\")")

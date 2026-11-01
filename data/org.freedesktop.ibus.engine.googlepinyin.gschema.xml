@@ -40,11 +40,6 @@
       <default>true</default>
       <summary>Remember new words</summary>
     </key>
-    <key name="sort-order" type="i">
-      <range min="0" max="2" />
-      <default>0</default>
-      <summary>Sort order</summary>
-    </key>
     <key name="keyboard-layout" type="s">
       <default>'default'</default>
       <summary>Keyboard layout</summary>
@@ -185,6 +180,25 @@
     <key name="shortcut-traditional" type="s">
       <default>'&lt;Control&gt;&lt;Shift&gt;f'</default>
       <summary>Shortcut traditional</summary>
+    </key>
+    <key name="enable-cloud-input" type="b">
+      <default>false</default>
+      <summary>Enable Cloud Input</summary>
+    </key>
+    <key name="cloud-input-source" type="i">
+      <range min="0" max="1" />
+      <default>0</default>
+      <summary>Cloud Input Source</summary>
+    </key>
+    <key name="cloud-candidates-number" type="i">
+      <range min="1" max="9" />
+      <default>1</default>
+      <summary>Cloud Candidates Number</summary>
+    </key>
+    <key name="cloud-request-delay-time" type="i">
+      <range min="200" max="2000" />
+      <default>600</default>
+      <summary>Sending cloud requests with delay</summary>
     </key>
   </schema>
 </schemalist>
